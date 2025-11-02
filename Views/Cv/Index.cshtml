@@ -1,0 +1,43 @@
+@model CvApp.Models.CvModel
+@{
+    ViewData["Title"] = "CV Oluştur";
+}
+
+<h2>CV Oluştur</h2>
+
+<form asp-action="Index" method="post" class="p-3 border rounded bg-light">
+
+    <div class="mb-3">
+        <label>Ad Soyad</label>
+        <input asp-for="AdSoyad" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>E-posta</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Telefon</label>
+        <input asp-for="Telefon" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Okul</label>
+        <input asp-for="Okul" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Bölüm</label>
+        <input asp-for="Bolum" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Deneyim</label>
+        <textarea asp-for="Deneyim" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label>Yetenekler</label>
+        <input asp-for="Yetenekler" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Kariyer Hedefi</label>
+        <textarea asp-for="Hedef" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">CV Oluştur</button>
+</form>

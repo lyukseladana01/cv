@@ -1,0 +1,27 @@
+@model CvApp.Models.CvModel
+@{
+    ViewData["Title"] = "CV Önizleme";
+}
+
+<div class="container mt-4">
+    <div class="card p-4">
+        <h2>@Model.AdSoyad</h2>
+        <p><strong>E-posta:</strong> @Model.Email</p>
+        <p><strong>Telefon:</strong> @Model.Telefon</p>
+        <hr />
+        <h4>Eğitim</h4>
+        <p>@Model.Okul - @Model.Bolum</p>
+
+        <h4>Deneyim</h4>
+        <p>@Model.Deneyim</p>
+
+        <h4>Yetenekler</h4>
+        <p>@Model.Yetenekler</p>
+
+        <h4>Kariyer Hedefi</h4>
+        <p>@Model.Hedef</p>
+
+        <a href="/Cv/Index" class="btn btn-secondary mt-3">Yeni CV Oluştur</a>
+        <a href="/Cv/DownloadPdf" class="btn btn-success">📄 PDF Olarak İndir</a>
+    </div>
+</div>
